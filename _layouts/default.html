@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="container">
+      {% include header.html %}
+      <div class="content-wrapper">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+    </div>
+    <script src="{{ site.github.url }}/assets/js/header-responsive.js"></script>
+  </body>
+</html>

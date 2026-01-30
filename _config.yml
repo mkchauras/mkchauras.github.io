@@ -1,0 +1,28 @@
+# Site Build Settings
+
+# jekyll-paginate configuration
+paginate:            9
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           /:title
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+
+# Sass configuration
+sass:
+  quiet_deps: true
+  style: compressed
+
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           "mkchauras"
+description:	       "We are here to change the world"
+author:              "Mukesh Kumar Chaurasiya"
+
+# Site URL - required for proper sharing links
+url:                 "https://mkchauras.in"
+baseurl:             ""
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml

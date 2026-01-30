@@ -1,0 +1,65 @@
+---
+layout: page
+title: Search
+permalink: /search/
+order: 1
+---
+
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="Search blog posts..." style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 20px;">
+  <ul id="results-container"></ul>
+</div>
+
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<script>
+  window.simpleJekyllSearch = new SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/pages/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a><br><small>{date}</small><p>{content}</p></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: []
+  })
+</script>
+
+<style>
+  #results-container {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #results-container li {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  #results-container li a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  #results-container li a:hover {
+    text-decoration: underline;
+  }
+  
+  #results-container li p {
+    margin-top: 10px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  #results-container li small {
+    color: #999;
+  }
+</style>

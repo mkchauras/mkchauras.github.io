@@ -1,0 +1,9 @@
+<article class="post-card">
+  <a href="{{ site.github.url }}{{ post.url }}">
+    <div class="post-image" {% if post.image %}style="background-image:url({{ site.github.url }}/assets/img/{{ post.image }})"{% endif %}></div>
+    <div class="post-content">
+      <h2>{{ post.title }}</h2>
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+    </div>
+  </a>
+</article>
