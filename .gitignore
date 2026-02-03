@@ -164,3 +164,4 @@ cython_debug/
 _site
 vendor
 .jekyll-cache
+.bundle

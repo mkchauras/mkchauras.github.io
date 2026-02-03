@@ -8,10 +8,19 @@ This website is built using the [Millennial Jekyll theme](https://github.com/LeN
 
 ## Local Development
 
+Post under work are inside the folder work-in-progress.
+
 To serve on local end:
 
 ```bash
-bundle install --path vendor/bundle && bundle exec jekyll serve
+bundle config set path 'vendor/bundle'
+bundle install && bundle exec jekyll serve
+```
+
+To add a new post
+
+```bash
+bundle exec jekyll post "<Post Title>"
 ```
 
 Thankyou

@@ -5,7 +5,7 @@
 # This site: mkchauras.in by Mukesh Kumar Chaurasiya
 
 Gem::Specification.new do |spec|
-  spec.name          = "mkchauras-site"
+  spec.name          = "mkchauras"
   spec.version       = "1.0.0"
   spec.authors       = ["Mukesh Kumar Chaurasiya"]
   spec.email         = ["mkchauras@gmail.com"]
@@ -21,5 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.3"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.6"
+  spec.add_runtime_dependency "jekyll-compose"
 
 end
