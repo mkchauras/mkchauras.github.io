@@ -1,7 +1,9 @@
 .post-content {
-  width: 600px;
+  width: 100%;
+  max-width: $container-width - 40px;
   display: block;
   margin: 10px auto 10px;
+  padding: 0 20px;
 }
 .post-date {
   display: block;

@@ -1,22 +1,28 @@
 .site-header {
   min-height: 56px;
-  width: $container-width;
+  width: 100%;
   position: fixed;
   background-color: white;
   box-shadow: 0 5px 6px -6px #bbb;
   z-index: 100;
+  left: 0;
+  top: 0;
+}
+
+.site-header-inner {
+  width: $container-width;
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 56px;
+  padding: 0 10px;
 }
+
 @media (max-width: $container-width) {
-  .site-header {
-    min-height: 56px;
+  .site-header-inner {
     width: 95vw;
-    position: fixed;
-    background-color: white;
-    box-shadow: 0 5px 6px -6px #bbb;
-    z-index: 100;
   }
 }
 .site-header a {

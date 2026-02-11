@@ -1,6 +1,7 @@
 .page-content {
-  max-width: 600px;
+  width: 100%;
+  max-width: $container-width - 40px;
   display: block;
   margin: 10px auto 10px;
-  padding: 0px 10px 10px;
+  padding: 0px 20px 10px;
 }

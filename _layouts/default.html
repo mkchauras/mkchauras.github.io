@@ -2,13 +2,33 @@
 <html>
   {% include head.html %}
   <body>
-    <div class="container">
-      {% include header.html %}
-      <div class="content-wrapper">
-        {{ content }}
+    {% include header.html %}
+    
+    <div class="site-wrapper">
+      <aside class="sidebar-ad left">
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+      </aside>
+      
+      <div class="container">
+        <div class="content-wrapper">
+          {{ content }}
+        </div>
+        {% include footer.html %}
       </div>
-      {% include footer.html %}
+      
+      <aside class="sidebar-ad right">
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+        {% include ad-block.html %}
+      </aside>
     </div>
+    
     <script src="{{ site.github.url }}/assets/js/header-responsive.js"></script>
   </body>
 </html>

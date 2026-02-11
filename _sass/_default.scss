@@ -2,6 +2,47 @@
   Site container
 */
 
+.site-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: $header-thickness + 10px;
+  gap: 0;
+}
+
+.sidebar-ad {
+  width: 160px;
+  flex-shrink: 0;
+  position: sticky;
+  top: $header-thickness + 20px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-ad.left {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar-ad.right {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ad-unit {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 20px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  border: 2px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 .container {
   width: $container-width;
   margin-left: auto;
@@ -11,7 +52,6 @@
   text-decoration: underline;
 }
 .content-wrapper {
-  padding-top: $header-thickness+10px;
   margin: auto;
   display: block;
   width: $container-width - 20px;
@@ -19,6 +59,9 @@
 .content-wrapper h1 {
   margin: 20px 0px 5px;
 }
+
+/* Sidebars always visible - removed media query */
+
 @media (max-width: $container-width) {
   .container {
     width: 95vw;
@@ -26,7 +69,6 @@
     margin-right: auto;
   }
   .content-wrapper {
-    padding-top: $header-thickness+10px;
     margin: auto;
     display: block;
     width: 95vw;
