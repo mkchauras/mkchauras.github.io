@@ -3,7 +3,8 @@
   {% assign first_post = true %}
   {% for tag in page.tags %}
     {% for mypost in site.tags[tag] limit:2 %}
-      {% unless listed_posts_urls contains mypost.url %}
+      {% if jekyll.environment == "development" or mypost.ready == true %}
+        {% unless listed_posts_urls contains mypost.url %}
         {% if first_post %}
           <h2>{{ site.data.settings.related_posts }}</h2>
           <ul class="related-posts">
@@ -24,8 +25,9 @@
             </a>
           </h3>
         </li>
-        {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
-      {% endunless %}
+          {% assign listed_posts_urls = listed_posts_urls | push: mypost.url %}
+        {% endunless %}
+      {% endif %}
     {% endfor %}
   {% endfor %}
   {% unless first_post %}</ul>{% endunless %}

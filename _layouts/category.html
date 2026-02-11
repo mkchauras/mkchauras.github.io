@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% for post in site.posts %}
-  {% if post.categories contains page.category %}
+  {% if post.categories contains page.category and (jekyll.environment == "development" or post.ready == true) %}
     {% include featured-post.html %}
   {% endif %}
 {% endfor %}

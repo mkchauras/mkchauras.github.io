@@ -17,6 +17,12 @@ bundle config set path 'vendor/bundle'
 bundle install && bundle exec jekyll serve
 ```
 
+To test for production:
+
+```bash
+JEKYLL_ENV=production bundle exec jekyll serve
+```
+
 To add a new post
 
 ```bash

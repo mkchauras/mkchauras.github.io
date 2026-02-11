@@ -2,9 +2,9 @@
 layout: post
 title: Enabling rust in linux for powerpc64
 image: rust-linux/rust-linux.jpg
-categories: [linux, kernel, rust]
 tags: [rust-for-linux, powerpc, llvm, kernel]
 date: 2026-02-04 00:07 +0530
+ready: true
 ---
 
 ## Enabling Rust for Linux on PowerPC: Toolchain Gaps and Target-Feature Reality

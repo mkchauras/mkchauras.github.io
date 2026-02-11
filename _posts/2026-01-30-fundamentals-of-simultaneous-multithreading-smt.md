@@ -2,10 +2,10 @@
 layout: post
 title: Fundamentals of Simultaneous Multithreading (SMT)
 author: Mukesh Kumar Chaurasiya
-categories: [fundamentals, multithreading, smt]
 tags: [fundamentals, multithreading, smt, cpu-architecture, performance]
 image: smt-fundamentals/smt-explanation.jpg
 date: 2026-01-30 21:42 +0530
+ready: false
 ---
 # Abstract
 

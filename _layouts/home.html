@@ -5,7 +5,9 @@ title: Home
 
 <div class="posts-grid">
   {% for post in paginator.posts %}
-    {% include featured-post.html %}
+    {% if jekyll.environment == "development" or post.ready == true %}
+      {% include featured-post.html %}
+    {% endif %}
   {% endfor %}
 </div>
 
